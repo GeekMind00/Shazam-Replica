@@ -6,7 +6,10 @@ from helpers import *
 
 userSongHash = generateFingerprintUser(
     '/Users/mostafaayad/Shazam-clone/songs/Group01_Song1/Group01_Song1_full.mp3')
-# similarityResults =
-similarityResults = compareFingerprint(userSongHash)
+
+
+userWeightedAverageSongHash = generateFingerprintUserMixing('/Users/mostafaayad/Shazam-clone/songs/Group01_Song2/Group01_Song2_full.mp3',
+                                                            '/Users/mostafaayad/Shazam-clone/songs/Group01_Song1/Group01_Song1_full.mp3', 1, 1)
+similarityResults = compareFingerprint(userWeightedAverageSongHash)
 
 print(similarityResults)

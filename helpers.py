@@ -98,19 +98,19 @@ def parseFingerprintDatabase():  # needs some improvements
                 for keyHash in songs[feature]:
                     if(keyHash == 'full'):
                         songName = 'Group' + \
-                            songId[0:2]+'_Song'+songId[2]+'_full'
+                            songId[0:2]+'_Song'+songId[2]
                         parsedDatabaseSongHash.update(
                             {songName: songs[feature][keyHash]})
                     else:
                         if(keyHash == 'music'):
                             songName = 'Group' + \
-                                songId[0:2]+'_Song'+songId[2]+'_music'
+                                songId[0:2]+'_Song'+songId[2]
                             parsedDatabaseSongHash.update(
                                 {songName: songs[feature][keyHash]})
                         else:
                             if(keyHash == 'vocal'):
                                 songName = 'Group' + \
-                                    songId[0:2]+'_Song'+songId[2]+'_vocal'
+                                    songId[0:2]+'_Song'+songId[2]
                                 parsedDatabaseSongHash.update(
                                     {songName: songs[feature][keyHash]})
     return parsedDatabaseSongHash
@@ -127,3 +127,22 @@ def compareFingerprint(userSongHash):
     similarityResults = sorted(
         similarityResults.items(), key=lambda x: x[1], reverse=True)
     return similarityResults
+
+
+def generateWeightedAverageSong(songPath_1, songPath_2, weight_1, weight_2):
+    samplingFreq_1, audioData_1 = readAudioFile(songPath_1)
+    samplingFreq_2, audioData_2 = readAudioFile(songPath_2)
+
+    print(samplingFreq_1)
+    print(samplingFreq_2)
+    weightedAverageSongData = weight_1*audioData_1 + weight_2*audioData_2
+
+    return weightedAverageSongData, samplingFreq_1
+
+
+def generateFingerprintUserMixing(songPath_1, songPath_2, weight_1, weight_2):
+    weightedAverageSongData, samplingFreq = generateWeightedAverageSong(
+        songPath_1, songPath_2, weight_1, weight_2)
+    mfcc = generateFeatures(weightedAverageSongData, samplingFreq)
+    mfccHash = str(generatePerceptualHash(mfcc))
+    return mfccHash
