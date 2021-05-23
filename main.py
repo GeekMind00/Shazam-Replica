@@ -8,8 +8,8 @@ userSongHash = generateFingerprintUser(
     '/Users/mostafaayad/Shazam-clone/songs/Group01_Song1/Group01_Song1_full.mp3')
 
 
-userWeightedAverageSongHash = generateFingerprintUserMixing('/Users/mostafaayad/Shazam-clone/songs/Group01_Song2/Group01_Song2_full.mp3',
-                                                            '/Users/mostafaayad/Shazam-clone/songs/Group01_Song1/Group01_Song1_full.mp3', 1, 1)
+userWeightedAverageSongHash = generateFingerprintUserMixing('/Users/mostafaayad/Shazam-clone/songs/Group01_Song3/Group01_Song3_full.mp3',
+                                                            '/Users/mostafaayad/Shazam-clone/songs/Group01_Song4/Group01_Song4_full.mp3', 1, 0)
 similarityResults = compareFingerprint(userWeightedAverageSongHash)
 
 print(similarityResults)

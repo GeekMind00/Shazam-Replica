@@ -29,7 +29,7 @@ def generateSpectrogram(path, audioData, samplingFreq):
     fig.savefig(spectrogamFilePath)  # save the spectrogram
 
 
-def generateFeatures(audioData, samplingFreq):
+def generateFeatures(audioData, samplingFreq):  # TODO: ADD MORE FEATURES
     mfcc = librosa.feature.mfcc(
         audioData.astype('float64'), sr=samplingFreq)  # generate the mfcc spectral feature
     return mfcc
@@ -86,7 +86,7 @@ def generateFingerprintUser(songPath):
     return mfccHash
 
 
-def parseFingerprintDatabase():  # needs some improvements
+def parseFingerprintDatabase():  # TODO: needs some improvements
     parsedDatabaseSongHash = {}
     databaseSongHash = readFingerprintDatabase()
     for songs in databaseSongHash:
@@ -122,8 +122,8 @@ def compareFingerprint(userSongHash):
     for song in databaseSongHash:
         similarityIndex = SequenceMatcher(
             None, userSongHash, databaseSongHash[song]).ratio()
-        if(similarityIndex > 0.2):
-            similarityResults.update({song: similarityIndex})
+        # if(similarityIndex > 0.2):
+        similarityResults.update({song: similarityIndex})
     similarityResults = sorted(
         similarityResults.items(), key=lambda x: x[1], reverse=True)
     return similarityResults
