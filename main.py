@@ -2,9 +2,9 @@ from helpers import *
 from DB_helpers import *
 from USER_helpers import *
 # # ==============================================================================================
-# for i in range(4):
-#     songName = 'Group01_Song'
-#     generateFingerprintDatabase(songName+str(i+1))
+for i in range(4):
+    songName = 'Group01_Song'
+    generateFingerprintDatabase(songName+str(i+1))
 
 # ==============================================================================================
 userSongHashes = generateFingerprintUser(

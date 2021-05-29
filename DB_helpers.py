@@ -17,15 +17,10 @@ def generateFingerprintDatabase(songName):
         samplingFreq, audioData = helpers.readAudioFile(
             songComponentsPaths[i])  # read wav file
 
-        helpers.generateSpectrogram(
-            songComponentsPaths[i], audioData, samplingFreq)
+        songHashes = helpers.generateFingerprint(audioData, samplingFreq)
 
-        melSpectrogram, mfcc = helpers.generateFeatures(
-            audioData, samplingFreq)
-
-        melSpectrogramHashes.append(
-            helpers.generatePerceptualHash(melSpectrogram))
-        mfccHashes.append(helpers.generatePerceptualHash(mfcc))
+        melSpectrogramHashes.append(songHashes['melSpectrogramHash'])
+        mfccHashes.append(songHashes['mfccHash'])
 
     songId = songName[5:7]+songName[-1]
     songHashes = {
