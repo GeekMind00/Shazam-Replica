@@ -1,2 +1,4 @@
 __pycache__/
 #ignore pycache
+shazam.build/
+shazam.dist/

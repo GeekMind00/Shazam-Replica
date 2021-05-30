@@ -15,6 +15,7 @@ from DB_helpers import readFingerprintDatabase
 def readAudioFile(path):
     mp3_audio = AudioSegment.from_file(
         path, format="mp3")  # read mp3
+    mp3_audio = mp3_audio[:60000]  # take the first 60 sec of the audio
     wname = mktemp('.wav')  # use temporary file
     mp3_audio.export(wname, format="wav", parameters=[
         "-ac", "1"])  # convert to wav  # convert to mono wav instead of stereo
@@ -101,7 +102,7 @@ def compareFingerprint(userSongHashes):
             avgDifference = (melSpectrogramHammingDistance +
                              mfccHammingDistance)/2
 
-            mappedAvgDifference = mapValue(avgDifference, 0, 255, 0, 1)
+            mappedAvgDifference = mapValue(avgDifference, 0, 256, 0, 1)
             similarityIndex = int((1-mappedAvgDifference)*100)
             similarityResults.update({songName: similarityIndex})
 
