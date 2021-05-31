@@ -7,6 +7,8 @@ from helpers import *
 from DB_helpers import *
 from USER_helpers import *
 
+# ==============================================================================================
+
 
 class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
 
@@ -14,24 +16,40 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
         super(ShazamApp, self).__init__()
         self.setupUi(self)
 
+    # ==============================================================================================
+
     def scan(self):
+        """
+        scan is the main function that generates the fingerprint from the input files then initiates the comparing process then show the ouput in a table in the UI.
+        gets called when the user presses 'scan' button.
+        """
+
         self.sliderValue = (self.horizontalSlider.value())
         weight_1 = self.sliderValue / 100
         weight_2 = 1-weight_1
         if(self.scanMode == 'One Song'):
-            userSongHashes = generateFingerprintUser(self.filePath)
+            userSong = Song(self.filePath)
+            userSongHashes = userSong.generateFingerprint()
             self.similarityResults = compareFingerprint(userSongHashes)
         elif(self.scanMode == 'Two Songs'):
+            songOne = Song(self.filePath[0])
+            songTwo = Song(self.filePath[1])
             userWeightedAverageSongHashes = generateFingerprintUserMixing(
-                self.filePath[0], self.filePath[1], weight_1, weight_2)
+                songOne, songTwo, weight_1, weight_2)
             self.similarityResults = compareFingerprint(
                 userWeightedAverageSongHashes)
         self.createTable()
 
+    # ==============================================================================================
+
     def browseOneFile(self):
-        ''' Called when the user presses the Browse button
-        '''
-        # self.debugPrint( "Browse button pressed" )
+        """
+        browseFiles saves the file path that the user chose from the UI.
+        gets called when the user presses 'Browse a File' button.
+
+        :return: a string that represents thepath to the chosen file by the user
+        """
+
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
         self.filePath, _ = QtWidgets.QFileDialog.getOpenFileName(
@@ -42,10 +60,16 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
             options=options)
         self.scanMode = 'One Song'
 
+    # ==============================================================================================
+
     def browseFiles(self):
-        ''' Called when the user presses the Browse button
-        '''
-        # self.debugPrint( "Browse button pressed" )
+        """
+        browseFiles saves the file paths that the user chose from the UI.
+        gets called when the user presses 'Browse Files' button.
+
+        :return: a list of paths to the chosen files by the user
+        """
+
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
         self.filePath, _ = QtWidgets.QFileDialog.getOpenFileNames(
@@ -56,7 +80,13 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
             options=options)
         self.scanMode = 'Two Songs'
 
+    # ==============================================================================================
+
     def createTable(self):
+        """
+        createTable creates the table in the UI and show the similarity index of each song.
+
+        """
         i = 0
         numResults = len(self.similarityResults)
         # Row count
@@ -75,6 +105,9 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch)
+
+
+# ==============================================================================================
 
 
 def main():

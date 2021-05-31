@@ -4,31 +4,42 @@ from helpers import *
 # ==============================================================================================
 
 
-def generateFingerprintUser(songPath):
-    samplingFreq, audioData = readAudioFile(songPath)  # read wav file
-    userSongHashes = generateFingerprint(audioData, samplingFreq)
-    return userSongHashes
+def generateFingerprintUserMixing(songOne, songTwo, weightOne, weightTwo):
+    """
+    generateFingerprintUserMixing generates the fingerprint of a weighted average song.
 
+    :param songOne: the first song chosen by the user represented as a Song object 
+    :param songTwo: the second song chosen by the user represented as a Song object 
+    :param weightOne: the weight of the first song represented as an integer
+    :param weightTwo: the weight of the second song represented as an integer
+    :return: a dictionary that contains the hashed fingerprint of a weighted average song
+    """
 
-# ==============================================================================================
+    weightedAverageSong = Song('')
+    weightedAverageSong.audioData, weightedAverageSong.samplingFreq = generateWeightedAverageSong(
+        songOne, songTwo, weightOne, weightTwo)
 
-
-def generateFingerprintUserMixing(songPath_1, songPath_2, weight_1, weight_2):
-    weightedAverageAudioData, samplingFreq = generateWeightedAverageSong(
-        songPath_1, songPath_2, weight_1, weight_2)
-    userWeightedAverageSongHashes = generateFingerprint(
-        weightedAverageAudioData, samplingFreq)
+    userWeightedAverageSongHashes = weightedAverageSong.generateFingerprint()
     return userWeightedAverageSongHashes
 
 # ==============================================================================================
 
 
-def generateWeightedAverageSong(songPath_1, songPath_2, weight_1, weight_2):
-    samplingFreq_1, audioData_1 = readAudioFile(songPath_1)
-    samplingFreq_2, audioData_2 = readAudioFile(songPath_2)
-    weightedAverageSongData = weight_1*audioData_1 + weight_2*audioData_2
+def generateWeightedAverageSong(songOne, songTwo, weightOne, weightTwo):
+    """
+    generateWeightedAverageSong sums two audio signals in time domain.
 
-    return weightedAverageSongData, samplingFreq_1
+    :param songOne: the first song chosen by the user represented as a Song object 
+    :param songTwo: the second song chosen by the user represented as a Song object 
+    :param weightOne: the weight of the first song represented as an integer
+    :param weightTwo: the weight of the second song represented as an integer
+    :return: data and sampling frequency of the created weighted average song
+    """
+
+    weightedAverageSongData = weightOne * \
+        songOne.audioData + weightTwo*songTwo.audioData
+
+    return weightedAverageSongData, songOne.samplingFreq
 
 
 # ==============================================================================================
