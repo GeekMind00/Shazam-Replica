@@ -6,7 +6,7 @@ import librosa
 import numpy as np
 import imagehash
 from PIL import Image
-from DB_helpers import readFingerprintDatabase
+# from DB_helpers import readFingerprintDatabase
 # ==============================================================================================
 
 
@@ -85,6 +85,7 @@ class Song:
                                NFFT=128, noverlap=0)  # plot spectrogram
         spectrogamFilePath = self.path[:-4]  # remove '.mp3' from the path
         fig.savefig(spectrogamFilePath)  # save the spectrogram
+        plt.close(fig)
 
     # ==============================================================================================
 
