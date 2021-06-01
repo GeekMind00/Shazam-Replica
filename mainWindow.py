@@ -78,7 +78,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.pushButton.clicked.connect(MainWindow.scan)
-        self.pushButton_3.clicked.connect(MainWindow.browseOneFile)
+        self.pushButton_3.clicked.connect(
+            MainWindow.browseOneFile)  # repetition
         self.pushButton_2.clicked.connect(MainWindow.browseFiles)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -90,7 +91,8 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Choose 2 Songs"))
         self.label_3.setText(_translate("MainWindow", "Similarity Index"))
         self.label_4.setText(_translate("MainWindow", "Shazam-clone"))
-        self.label_5.setText(_translate("MainWindow", "Choose Weight of 2 songs"))
+        self.label_5.setText(_translate(
+            "MainWindow", "Choose Weight of 2 songs"))
         self.label_6.setText(_translate("MainWindow", "Song 1"))
         self.label_7.setText(_translate("MainWindow", "Song 2"))
         self.pushButton_3.setText(_translate("MainWindow", "Browse a File"))

@@ -43,7 +43,7 @@ class Song:
         generates the fingerprint of each song as a hashed mfcc & mel-spectrogram features.
     """
 
-    def __init__(self, path):
+    def __init__(self, path=''):
         """
         Constructs all the necessary attributes for the song object.
 
@@ -202,6 +202,7 @@ def compareFingerprint(userSongHashes):
 
     # initialization
     similarityResults = {}
+    songComponents = ['Full', 'Music', 'Vocals']
 
     # fetches the hashes from the database
     databaseSongsHash = readFingerprintDatabase()

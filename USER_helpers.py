@@ -15,7 +15,7 @@ def generateFingerprintUserMixing(songOne, songTwo, weightOne, weightTwo):
     :return: a dictionary that contains the hashed fingerprint of a weighted average song
     """
 
-    weightedAverageSong = Song('')
+    weightedAverageSong = Song()
     weightedAverageSong.audioData, weightedAverageSong.samplingFreq = generateWeightedAverageSong(
         songOne, songTwo, weightOne, weightTwo)
 
