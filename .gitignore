@@ -1,3 +1,5 @@
 __pycache__/
 #ignore pycache
 songs/
+.vscode/
+.gitignore/
