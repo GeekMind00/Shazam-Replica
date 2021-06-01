@@ -6,7 +6,17 @@ import librosa
 import numpy as np
 import imagehash
 from PIL import Image
-# from DB_helpers import readFingerprintDatabase
+import DB_helpers
+import logging
+# ==============================================================================================
+
+# config of the logger
+logging.basicConfig(filename="Shazam.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
+logger = logging.getLogger()  # Logger maintainer
+logger.setLevel(logging.DEBUG)
+
 # ==============================================================================================
 
 
@@ -55,6 +65,7 @@ class Song:
         self.path = path
         if(self.path):
             self.samplingFreq, self.audioData = self.readAudioFile()
+            logger.debug(self.path+" : audio has been read succesfully")
     # ==============================================================================================
 
     def readAudioFile(self):
@@ -86,6 +97,9 @@ class Song:
         spectrogamFilePath = self.path[:-4]  # remove '.mp3' from the path
         fig.savefig(spectrogamFilePath)  # save the spectrogram
         plt.close(fig)
+
+        logger.debug(
+            self.path+" : spectrogram has been saved successfully")
 
     # ==============================================================================================
 
@@ -122,6 +136,9 @@ class Song:
         self.melSpectrogramFeatureImage.save(melSpectrogramPath)
         self.mfccFeatureImage.save(mfccPath)
 
+        logger.debug(
+            self.path+" : features has been saved successfully")
+
     # ==============================================================================================
 
     def generateFingerprint(self):
@@ -136,6 +153,9 @@ class Song:
         SongHashes['melSpectrogramHash'] = generatePerceptualHash(
             self.melSpectrogramFeatureImage)
         SongHashes['mfccHash'] = generatePerceptualHash(self.mfccFeatureImage)
+
+        logger.debug(
+            self.path+" : fingerprint has been generated successfully")
 
         return SongHashes
 
@@ -153,6 +173,7 @@ def generatePerceptualHash(feature):
 
     featureHash = imagehash.phash(  # generate perceptual hash
         feature, hash_size=16)
+
     return str(featureHash)
 
 
@@ -206,13 +227,18 @@ def compareFingerprint(userSongHashes):
     songComponents = ['Full', 'Music', 'Vocals']
 
     # fetches the hashes from the database
-    databaseSongsHash = readFingerprintDatabase()
+    databaseSongsHash = DB_helpers.readFingerprintDatabase()
+
+    logger.debug(
+        "all the hashes in the database has been retrieved successfully")
 
     # iterate over the hashes to get a result against each one
     for songHash in databaseSongsHash:
 
         # generate the song name from the ID that we fetched from the database
         songName = 'Group' + songHash['ID'][0:2]+'_Song'+songHash['ID'][2]
+
+        maxSimilarityIndex = 0
 
         # iterate over each song component (full,music,vocal)
         for songComponent in songComponents:
@@ -234,7 +260,12 @@ def compareFingerprint(userSongHashes):
             similarityIndex = int((1-mappedAvgDifference)*100)
 
             # save the results in the dictionary mentioned above
-            similarityResults.update({songName: similarityIndex})
+            if(similarityIndex > maxSimilarityIndex):
+                similarityResults.update({songName: similarityIndex})
+                maxSimilarityIndex = similarityIndex
+
+        logger.debug(
+            "similarity index for " + songName + " has been generated successfully")
 
     # sort the results in a descending order
     similarityResults = sorted(

@@ -53,6 +53,9 @@ def generateFingerprintDatabase(songName):
     }
     writeFingerprintDatabase(songHashes)
 
+    logger.debug(
+        songName + " : hashed fingerprint of the three components of the song (full,music,vocals) has been saved successfully")
+
 
 # ==============================================================================================
 

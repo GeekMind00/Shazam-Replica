@@ -20,6 +20,10 @@ def generateFingerprintUserMixing(songOne, songTwo, weightOne, weightTwo):
         songOne, songTwo, weightOne, weightTwo)
 
     userWeightedAverageSongHashes = weightedAverageSong.generateFingerprint()
+
+    logger.debug(
+        "fingerprint of the weighted average song has been generated successfully")
+
     return userWeightedAverageSongHashes
 
 # ==============================================================================================
@@ -38,6 +42,9 @@ def generateWeightedAverageSong(songOne, songTwo, weightOne, weightTwo):
 
     weightedAverageSongData = weightOne * \
         songOne.audioData + weightTwo*songTwo.audioData
+
+    logger.debug(
+        songOne.path + ", " + songTwo.path + " : has been mixed successfully")
 
     return weightedAverageSongData, songOne.samplingFreq
 

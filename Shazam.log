@@ -1,0 +1,348 @@
+2021-06-01 17:09:38,228 Browse a File button returned the file path successfully
+2021-06-01 17:09:39,404 subprocess.call(['ffmpeg', '-y', '-f', 'mp3', '-i', '/Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Music.mp3', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+2021-06-01 17:09:39,661 subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpntv23r51', '-ac', '1', '-f', 'wav', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpz2zkbh9f'])
+2021-06-01 17:09:39,717 subprocess output: b'ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers'
+2021-06-01 17:09:39,718 subprocess output: b'  built with Apple clang version 12.0.5 (clang-1205.0.22.9)'
+2021-06-01 17:09:39,718 subprocess output: b'  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/4.4_1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox'
+2021-06-01 17:09:39,718 subprocess output: b'  libavutil      56. 70.100 / 56. 70.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libavcodec     58.134.100 / 58.134.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libavformat    58. 76.100 / 58. 76.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libavdevice    58. 13.100 / 58. 13.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libavfilter     7.110.100 /  7.110.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2021-06-01 17:09:39,718 subprocess output: b'  libswscale      5.  9.100 /  5.  9.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libswresample   3.  9.100 /  3.  9.100'
+2021-06-01 17:09:39,718 subprocess output: b'  libpostproc    55.  9.100 / 55.  9.100'
+2021-06-01 17:09:39,718 subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : stereo'
+2021-06-01 17:09:39,718 subprocess output: b"Input #0, wav, from '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpntv23r51':"
+2021-06-01 17:09:39,718 subprocess output: b'  Duration: 00:01:00.00, bitrate: 1411 kb/s'
+2021-06-01 17:09:39,718 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s'
+2021-06-01 17:09:39,718 subprocess output: b'Stream mapping:'
+2021-06-01 17:09:39,718 subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))'
+2021-06-01 17:09:39,718 subprocess output: b'Press [q] to stop, [?] for help'
+2021-06-01 17:09:39,718 subprocess output: b"Output #0, wav, to '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpz2zkbh9f':"
+2021-06-01 17:09:39,718 subprocess output: b'  Metadata:'
+2021-06-01 17:09:39,718 subprocess output: b'    ISFT            : Lavf58.76.100'
+2021-06-01 17:09:39,718 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s'
+2021-06-01 17:09:39,718 subprocess output: b'    Metadata:'
+2021-06-01 17:09:39,718 subprocess output: b'      encoder         : Lavc58.134.100 pcm_s16le'
+2021-06-01 17:09:39,718 subprocess output: b'size=       2kB time=00:00:00.00 bitrate=N/A speed=   0x'
+2021-06-01 17:09:39,718 subprocess output: b'size=    5168kB time=00:00:59.97 bitrate= 705.9kbits/s speed=3.98e+03x'
+2021-06-01 17:09:39,718 subprocess output: b'video:0kB audio:5168kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.001474%'
+2021-06-01 17:09:39,723 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Music.mp3 : audio has been read succesfully
+2021-06-01 17:09:39,954 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Music.mp3 : fingerprint has been generated successfully
+2021-06-01 17:09:39,955 all the hashes in the database has been retrieved successfully
+2021-06-01 17:09:39,956 similarity index for Group01_Song1 has been generated successfully
+2021-06-01 17:09:39,957 similarity index for Group01_Song2 has been generated successfully
+2021-06-01 17:09:39,957 similarity index for Group01_Song3 has been generated successfully
+2021-06-01 17:09:39,958 similarity index for Group01_Song4 has been generated successfully
+2021-06-01 17:09:39,959 similarity index for Group02_Song1 has been generated successfully
+2021-06-01 17:09:39,960 similarity index for Group02_Song2 has been generated successfully
+2021-06-01 17:09:39,961 similarity index for Group02_Song3 has been generated successfully
+2021-06-01 17:09:39,962 similarity index for Group02_Song4 has been generated successfully
+2021-06-01 17:09:39,962 similarity index for Group03_Song1 has been generated successfully
+2021-06-01 17:09:39,963 similarity index for Group03_Song2 has been generated successfully
+2021-06-01 17:09:39,964 similarity index for Group03_Song3 has been generated successfully
+2021-06-01 17:09:39,965 similarity index for Group03_Song4 has been generated successfully
+2021-06-01 17:09:39,966 similarity index for Group04_Song1 has been generated successfully
+2021-06-01 17:09:39,966 similarity index for Group04_Song2 has been generated successfully
+2021-06-01 17:09:39,967 similarity index for Group04_Song3 has been generated successfully
+2021-06-01 17:09:39,968 similarity index for Group04_Song4 has been generated successfully
+2021-06-01 17:09:39,969 similarity index for Group05_Song1 has been generated successfully
+2021-06-01 17:09:39,970 similarity index for Group05_Song2 has been generated successfully
+2021-06-01 17:09:39,970 similarity index for Group05_Song3 has been generated successfully
+2021-06-01 17:09:39,971 similarity index for Group05_Song4 has been generated successfully
+2021-06-01 17:09:39,972 similarity index for Group07_Song1 has been generated successfully
+2021-06-01 17:09:39,973 similarity index for Group07_Song2 has been generated successfully
+2021-06-01 17:09:39,974 similarity index for Group07_Song3 has been generated successfully
+2021-06-01 17:09:39,974 similarity index for Group07_Song4 has been generated successfully
+2021-06-01 17:09:39,975 similarity index for Group08_Song1 has been generated successfully
+2021-06-01 17:09:39,976 similarity index for Group08_Song2 has been generated successfully
+2021-06-01 17:09:39,977 similarity index for Group08_Song3 has been generated successfully
+2021-06-01 17:09:39,978 similarity index for Group08_Song4 has been generated successfully
+2021-06-01 17:09:39,978 similarity index for Group09_Song1 has been generated successfully
+2021-06-01 17:09:39,979 similarity index for Group09_Song2 has been generated successfully
+2021-06-01 17:09:39,980 similarity index for Group09_Song3 has been generated successfully
+2021-06-01 17:09:39,981 similarity index for Group09_Song4 has been generated successfully
+2021-06-01 17:09:39,982 similarity index for Group10_Song1 has been generated successfully
+2021-06-01 17:09:39,982 similarity index for Group10_Song2 has been generated successfully
+2021-06-01 17:09:39,983 similarity index for Group10_Song3 has been generated successfully
+2021-06-01 17:09:39,984 similarity index for Group10_Song4 has been generated successfully
+2021-06-01 17:09:39,985 similarity index for Group11_Song1 has been generated successfully
+2021-06-01 17:09:39,986 similarity index for Group11_Song2 has been generated successfully
+2021-06-01 17:09:39,986 similarity index for Group11_Song3 has been generated successfully
+2021-06-01 17:09:39,987 similarity index for Group11_Song4 has been generated successfully
+2021-06-01 17:09:39,988 similarity index for Group12_Song1 has been generated successfully
+2021-06-01 17:09:39,989 similarity index for Group12_Song2 has been generated successfully
+2021-06-01 17:09:39,989 similarity index for Group12_Song3 has been generated successfully
+2021-06-01 17:09:39,990 similarity index for Group12_Song4 has been generated successfully
+2021-06-01 17:09:39,991 similarity index for Group13_Song1 has been generated successfully
+2021-06-01 17:09:39,992 similarity index for Group13_Song2 has been generated successfully
+2021-06-01 17:09:39,993 similarity index for Group13_Song3 has been generated successfully
+2021-06-01 17:09:39,994 similarity index for Group13_Song4 has been generated successfully
+2021-06-01 17:09:39,994 similarity index for Group14_Song1 has been generated successfully
+2021-06-01 17:09:39,995 similarity index for Group14_Song2 has been generated successfully
+2021-06-01 17:09:39,996 similarity index for Group14_Song3 has been generated successfully
+2021-06-01 17:09:39,997 similarity index for Group14_Song4 has been generated successfully
+2021-06-01 17:09:39,998 similarity index for Group15_Song1 has been generated successfully
+2021-06-01 17:09:39,998 similarity index for Group15_Song2 has been generated successfully
+2021-06-01 17:09:39,999 similarity index for Group15_Song3 has been generated successfully
+2021-06-01 17:09:40,000 similarity index for Group15_Song4 has been generated successfully
+2021-06-01 17:09:40,001 similarity index for Group17_Song1 has been generated successfully
+2021-06-01 17:09:40,002 similarity index for Group17_Song2 has been generated successfully
+2021-06-01 17:09:40,002 similarity index for Group17_Song3 has been generated successfully
+2021-06-01 17:09:40,003 similarity index for Group17_Song4 has been generated successfully
+2021-06-01 17:09:40,004 similarity index for Group18_Song1 has been generated successfully
+2021-06-01 17:09:40,005 similarity index for Group18_Song2 has been generated successfully
+2021-06-01 17:09:40,006 similarity index for Group18_Song3 has been generated successfully
+2021-06-01 17:09:40,006 similarity index for Group18_Song4 has been generated successfully
+2021-06-01 17:09:40,007 similarity index for Group20_Song1 has been generated successfully
+2021-06-01 17:09:40,008 similarity index for Group20_Song2 has been generated successfully
+2021-06-01 17:09:40,009 similarity index for Group20_Song3 has been generated successfully
+2021-06-01 17:09:40,010 similarity index for Group20_Song4 has been generated successfully
+2021-06-01 17:09:40,010 similarity index for Group21_Song1 has been generated successfully
+2021-06-01 17:09:40,011 similarity index for Group21_Song2 has been generated successfully
+2021-06-01 17:09:40,012 similarity index for Group21_Song3 has been generated successfully
+2021-06-01 17:09:40,013 similarity index for Group21_Song4 has been generated successfully
+2021-06-01 17:09:40,014 similarity index for Group22_Song1 has been generated successfully
+2021-06-01 17:09:40,014 similarity index for Group22_Song2 has been generated successfully
+2021-06-01 17:09:40,015 similarity index for Group22_Song3 has been generated successfully
+2021-06-01 17:09:40,016 similarity index for Group22_Song4 has been generated successfully
+2021-06-01 17:09:40,017 similarity index for Group23_Song1 has been generated successfully
+2021-06-01 17:09:40,018 similarity index for Group23_Song2 has been generated successfully
+2021-06-01 17:09:40,018 similarity index for Group23_Song3 has been generated successfully
+2021-06-01 17:09:40,019 similarity index for Group23_Song4 has been generated successfully
+2021-06-01 17:09:40,019 scan button returned the results successfully
+2021-06-01 17:09:40,021 Table has been created successfully
+2021-06-01 17:09:46,661 Browse a File button returned the file path successfully
+2021-06-01 17:09:47,733 subprocess.call(['ffmpeg', '-y', '-f', 'mp3', '-i', '/Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Full.mp3', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+2021-06-01 17:09:48,020 subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpaomvr_wa', '-ac', '1', '-f', 'wav', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmp90zrhca4'])
+2021-06-01 17:09:48,078 subprocess output: b'ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers'
+2021-06-01 17:09:48,078 subprocess output: b'  built with Apple clang version 12.0.5 (clang-1205.0.22.9)'
+2021-06-01 17:09:48,078 subprocess output: b'  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/4.4_1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox'
+2021-06-01 17:09:48,078 subprocess output: b'  libavutil      56. 70.100 / 56. 70.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libavcodec     58.134.100 / 58.134.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libavformat    58. 76.100 / 58. 76.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libavdevice    58. 13.100 / 58. 13.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libavfilter     7.110.100 /  7.110.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2021-06-01 17:09:48,078 subprocess output: b'  libswscale      5.  9.100 /  5.  9.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libswresample   3.  9.100 /  3.  9.100'
+2021-06-01 17:09:48,078 subprocess output: b'  libpostproc    55.  9.100 / 55.  9.100'
+2021-06-01 17:09:48,078 subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : stereo'
+2021-06-01 17:09:48,078 subprocess output: b"Input #0, wav, from '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmpaomvr_wa':"
+2021-06-01 17:09:48,078 subprocess output: b'  Duration: 00:01:00.00, bitrate: 1536 kb/s'
+2021-06-01 17:09:48,078 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s'
+2021-06-01 17:09:48,079 subprocess output: b'Stream mapping:'
+2021-06-01 17:09:48,079 subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))'
+2021-06-01 17:09:48,079 subprocess output: b'Press [q] to stop, [?] for help'
+2021-06-01 17:09:48,079 subprocess output: b"Output #0, wav, to '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmp90zrhca4':"
+2021-06-01 17:09:48,079 subprocess output: b'  Metadata:'
+2021-06-01 17:09:48,079 subprocess output: b'    ISFT            : Lavf58.76.100'
+2021-06-01 17:09:48,079 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s16, 768 kb/s'
+2021-06-01 17:09:48,079 subprocess output: b'    Metadata:'
+2021-06-01 17:09:48,079 subprocess output: b'      encoder         : Lavc58.134.100 pcm_s16le'
+2021-06-01 17:09:48,079 subprocess output: b'size=       2kB time=00:00:00.00 bitrate=N/A speed=N/A'
+2021-06-01 17:09:48,079 subprocess output: b'size=    5625kB time=00:00:59.98 bitrate= 768.1kbits/s speed=3.63e+03x'
+2021-06-01 17:09:48,079 subprocess output: b'video:0kB audio:5625kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.001354%'
+2021-06-01 17:09:48,085 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Full.mp3 : audio has been read succesfully
+2021-06-01 17:09:48,349 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Full.mp3 : fingerprint has been generated successfully
+2021-06-01 17:09:48,350 all the hashes in the database has been retrieved successfully
+2021-06-01 17:09:48,351 similarity index for Group01_Song1 has been generated successfully
+2021-06-01 17:09:48,351 similarity index for Group01_Song2 has been generated successfully
+2021-06-01 17:09:48,352 similarity index for Group01_Song3 has been generated successfully
+2021-06-01 17:09:48,353 similarity index for Group01_Song4 has been generated successfully
+2021-06-01 17:09:48,354 similarity index for Group02_Song1 has been generated successfully
+2021-06-01 17:09:48,355 similarity index for Group02_Song2 has been generated successfully
+2021-06-01 17:09:48,355 similarity index for Group02_Song3 has been generated successfully
+2021-06-01 17:09:48,356 similarity index for Group02_Song4 has been generated successfully
+2021-06-01 17:09:48,357 similarity index for Group03_Song1 has been generated successfully
+2021-06-01 17:09:48,358 similarity index for Group03_Song2 has been generated successfully
+2021-06-01 17:09:48,359 similarity index for Group03_Song3 has been generated successfully
+2021-06-01 17:09:48,359 similarity index for Group03_Song4 has been generated successfully
+2021-06-01 17:09:48,360 similarity index for Group04_Song1 has been generated successfully
+2021-06-01 17:09:48,361 similarity index for Group04_Song2 has been generated successfully
+2021-06-01 17:09:48,362 similarity index for Group04_Song3 has been generated successfully
+2021-06-01 17:09:48,363 similarity index for Group04_Song4 has been generated successfully
+2021-06-01 17:09:48,363 similarity index for Group05_Song1 has been generated successfully
+2021-06-01 17:09:48,364 similarity index for Group05_Song2 has been generated successfully
+2021-06-01 17:09:48,365 similarity index for Group05_Song3 has been generated successfully
+2021-06-01 17:09:48,366 similarity index for Group05_Song4 has been generated successfully
+2021-06-01 17:09:48,367 similarity index for Group07_Song1 has been generated successfully
+2021-06-01 17:09:48,368 similarity index for Group07_Song2 has been generated successfully
+2021-06-01 17:09:48,368 similarity index for Group07_Song3 has been generated successfully
+2021-06-01 17:09:48,369 similarity index for Group07_Song4 has been generated successfully
+2021-06-01 17:09:48,370 similarity index for Group08_Song1 has been generated successfully
+2021-06-01 17:09:48,371 similarity index for Group08_Song2 has been generated successfully
+2021-06-01 17:09:48,372 similarity index for Group08_Song3 has been generated successfully
+2021-06-01 17:09:48,372 similarity index for Group08_Song4 has been generated successfully
+2021-06-01 17:09:48,373 similarity index for Group09_Song1 has been generated successfully
+2021-06-01 17:09:48,374 similarity index for Group09_Song2 has been generated successfully
+2021-06-01 17:09:48,375 similarity index for Group09_Song3 has been generated successfully
+2021-06-01 17:09:48,376 similarity index for Group09_Song4 has been generated successfully
+2021-06-01 17:09:48,376 similarity index for Group10_Song1 has been generated successfully
+2021-06-01 17:09:48,377 similarity index for Group10_Song2 has been generated successfully
+2021-06-01 17:09:48,378 similarity index for Group10_Song3 has been generated successfully
+2021-06-01 17:09:48,379 similarity index for Group10_Song4 has been generated successfully
+2021-06-01 17:09:48,380 similarity index for Group11_Song1 has been generated successfully
+2021-06-01 17:09:48,380 similarity index for Group11_Song2 has been generated successfully
+2021-06-01 17:09:48,381 similarity index for Group11_Song3 has been generated successfully
+2021-06-01 17:09:48,382 similarity index for Group11_Song4 has been generated successfully
+2021-06-01 17:09:48,383 similarity index for Group12_Song1 has been generated successfully
+2021-06-01 17:09:48,384 similarity index for Group12_Song2 has been generated successfully
+2021-06-01 17:09:48,384 similarity index for Group12_Song3 has been generated successfully
+2021-06-01 17:09:48,385 similarity index for Group12_Song4 has been generated successfully
+2021-06-01 17:09:48,386 similarity index for Group13_Song1 has been generated successfully
+2021-06-01 17:09:48,387 similarity index for Group13_Song2 has been generated successfully
+2021-06-01 17:09:48,388 similarity index for Group13_Song3 has been generated successfully
+2021-06-01 17:09:48,388 similarity index for Group13_Song4 has been generated successfully
+2021-06-01 17:09:48,389 similarity index for Group14_Song1 has been generated successfully
+2021-06-01 17:09:48,390 similarity index for Group14_Song2 has been generated successfully
+2021-06-01 17:09:48,391 similarity index for Group14_Song3 has been generated successfully
+2021-06-01 17:09:48,392 similarity index for Group14_Song4 has been generated successfully
+2021-06-01 17:09:48,392 similarity index for Group15_Song1 has been generated successfully
+2021-06-01 17:09:48,393 similarity index for Group15_Song2 has been generated successfully
+2021-06-01 17:09:48,394 similarity index for Group15_Song3 has been generated successfully
+2021-06-01 17:09:48,395 similarity index for Group15_Song4 has been generated successfully
+2021-06-01 17:09:48,396 similarity index for Group17_Song1 has been generated successfully
+2021-06-01 17:09:48,396 similarity index for Group17_Song2 has been generated successfully
+2021-06-01 17:09:48,397 similarity index for Group17_Song3 has been generated successfully
+2021-06-01 17:09:48,398 similarity index for Group17_Song4 has been generated successfully
+2021-06-01 17:09:48,399 similarity index for Group18_Song1 has been generated successfully
+2021-06-01 17:09:48,400 similarity index for Group18_Song2 has been generated successfully
+2021-06-01 17:09:48,400 similarity index for Group18_Song3 has been generated successfully
+2021-06-01 17:09:48,401 similarity index for Group18_Song4 has been generated successfully
+2021-06-01 17:09:48,402 similarity index for Group20_Song1 has been generated successfully
+2021-06-01 17:09:48,403 similarity index for Group20_Song2 has been generated successfully
+2021-06-01 17:09:48,403 similarity index for Group20_Song3 has been generated successfully
+2021-06-01 17:09:48,404 similarity index for Group20_Song4 has been generated successfully
+2021-06-01 17:09:48,405 similarity index for Group21_Song1 has been generated successfully
+2021-06-01 17:09:48,406 similarity index for Group21_Song2 has been generated successfully
+2021-06-01 17:09:48,407 similarity index for Group21_Song3 has been generated successfully
+2021-06-01 17:09:48,407 similarity index for Group21_Song4 has been generated successfully
+2021-06-01 17:09:48,408 similarity index for Group22_Song1 has been generated successfully
+2021-06-01 17:09:48,409 similarity index for Group22_Song2 has been generated successfully
+2021-06-01 17:09:48,410 similarity index for Group22_Song3 has been generated successfully
+2021-06-01 17:09:48,411 similarity index for Group22_Song4 has been generated successfully
+2021-06-01 17:09:48,411 similarity index for Group23_Song1 has been generated successfully
+2021-06-01 17:09:48,412 similarity index for Group23_Song2 has been generated successfully
+2021-06-01 17:09:48,413 similarity index for Group23_Song3 has been generated successfully
+2021-06-01 17:09:48,414 similarity index for Group23_Song4 has been generated successfully
+2021-06-01 17:09:48,414 scan button returned the results successfully
+2021-06-01 17:09:48,415 Table has been created successfully
+2021-06-01 17:09:52,400 Browse a File button returned the file path successfully
+2021-06-01 17:09:53,313 subprocess.call(['ffmpeg', '-y', '-f', 'mp3', '-i', '/Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Vocals.mp3', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+2021-06-01 17:09:53,587 subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmppcd70gtj', '-ac', '1', '-f', 'wav', '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmp9wgf4k2t'])
+2021-06-01 17:09:53,646 subprocess output: b'ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers'
+2021-06-01 17:09:53,646 subprocess output: b'  built with Apple clang version 12.0.5 (clang-1205.0.22.9)'
+2021-06-01 17:09:53,646 subprocess output: b'  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/4.4_1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox'
+2021-06-01 17:09:53,646 subprocess output: b'  libavutil      56. 70.100 / 56. 70.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libavcodec     58.134.100 / 58.134.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libavformat    58. 76.100 / 58. 76.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libavdevice    58. 13.100 / 58. 13.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libavfilter     7.110.100 /  7.110.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libavresample   4.  0.  0 /  4.  0.  0'
+2021-06-01 17:09:53,646 subprocess output: b'  libswscale      5.  9.100 /  5.  9.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libswresample   3.  9.100 /  3.  9.100'
+2021-06-01 17:09:53,646 subprocess output: b'  libpostproc    55.  9.100 / 55.  9.100'
+2021-06-01 17:09:53,646 subprocess output: b'Guessed Channel Layout for Input Stream #0.0 : stereo'
+2021-06-01 17:09:53,646 subprocess output: b"Input #0, wav, from '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmppcd70gtj':"
+2021-06-01 17:09:53,646 subprocess output: b'  Duration: 00:01:00.00, bitrate: 1411 kb/s'
+2021-06-01 17:09:53,646 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s'
+2021-06-01 17:09:53,647 subprocess output: b'Stream mapping:'
+2021-06-01 17:09:53,647 subprocess output: b'  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))'
+2021-06-01 17:09:53,647 subprocess output: b'Press [q] to stop, [?] for help'
+2021-06-01 17:09:53,647 subprocess output: b"Output #0, wav, to '/var/folders/_x/g39vmnxn14z8lpgvjlynx88m0000gn/T/tmp9wgf4k2t':"
+2021-06-01 17:09:53,647 subprocess output: b'  Metadata:'
+2021-06-01 17:09:53,647 subprocess output: b'    ISFT            : Lavf58.76.100'
+2021-06-01 17:09:53,647 subprocess output: b'  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, mono, s16, 705 kb/s'
+2021-06-01 17:09:53,647 subprocess output: b'    Metadata:'
+2021-06-01 17:09:53,647 subprocess output: b'      encoder         : Lavc58.134.100 pcm_s16le'
+2021-06-01 17:09:53,647 subprocess output: b'size=       2kB time=00:00:00.00 bitrate=N/A speed=   0x'
+2021-06-01 17:09:53,647 subprocess output: b'size=    5168kB time=00:00:59.97 bitrate= 705.9kbits/s speed=4.01e+03x'
+2021-06-01 17:09:53,647 subprocess output: b'video:0kB audio:5168kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.001474%'
+2021-06-01 17:09:53,651 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Vocals.mp3 : audio has been read succesfully
+2021-06-01 17:09:53,905 /Users/mostafaayad/Shazam-clone/songs/Group25_Song4/Group25_Song4_Vocals.mp3 : fingerprint has been generated successfully
+2021-06-01 17:09:53,906 all the hashes in the database has been retrieved successfully
+2021-06-01 17:09:53,907 similarity index for Group01_Song1 has been generated successfully
+2021-06-01 17:09:53,907 similarity index for Group01_Song2 has been generated successfully
+2021-06-01 17:09:53,908 similarity index for Group01_Song3 has been generated successfully
+2021-06-01 17:09:53,909 similarity index for Group01_Song4 has been generated successfully
+2021-06-01 17:09:53,910 similarity index for Group02_Song1 has been generated successfully
+2021-06-01 17:09:53,911 similarity index for Group02_Song2 has been generated successfully
+2021-06-01 17:09:53,911 similarity index for Group02_Song3 has been generated successfully
+2021-06-01 17:09:53,912 similarity index for Group02_Song4 has been generated successfully
+2021-06-01 17:09:53,913 similarity index for Group03_Song1 has been generated successfully
+2021-06-01 17:09:53,914 similarity index for Group03_Song2 has been generated successfully
+2021-06-01 17:09:53,915 similarity index for Group03_Song3 has been generated successfully
+2021-06-01 17:09:53,915 similarity index for Group03_Song4 has been generated successfully
+2021-06-01 17:09:53,916 similarity index for Group04_Song1 has been generated successfully
+2021-06-01 17:09:53,917 similarity index for Group04_Song2 has been generated successfully
+2021-06-01 17:09:53,918 similarity index for Group04_Song3 has been generated successfully
+2021-06-01 17:09:53,919 similarity index for Group04_Song4 has been generated successfully
+2021-06-01 17:09:53,919 similarity index for Group05_Song1 has been generated successfully
+2021-06-01 17:09:53,920 similarity index for Group05_Song2 has been generated successfully
+2021-06-01 17:09:53,921 similarity index for Group05_Song3 has been generated successfully
+2021-06-01 17:09:53,922 similarity index for Group05_Song4 has been generated successfully
+2021-06-01 17:09:53,923 similarity index for Group07_Song1 has been generated successfully
+2021-06-01 17:09:53,923 similarity index for Group07_Song2 has been generated successfully
+2021-06-01 17:09:53,924 similarity index for Group07_Song3 has been generated successfully
+2021-06-01 17:09:53,925 similarity index for Group07_Song4 has been generated successfully
+2021-06-01 17:09:53,926 similarity index for Group08_Song1 has been generated successfully
+2021-06-01 17:09:53,927 similarity index for Group08_Song2 has been generated successfully
+2021-06-01 17:09:53,927 similarity index for Group08_Song3 has been generated successfully
+2021-06-01 17:09:53,928 similarity index for Group08_Song4 has been generated successfully
+2021-06-01 17:09:53,929 similarity index for Group09_Song1 has been generated successfully
+2021-06-01 17:09:53,930 similarity index for Group09_Song2 has been generated successfully
+2021-06-01 17:09:53,931 similarity index for Group09_Song3 has been generated successfully
+2021-06-01 17:09:53,931 similarity index for Group09_Song4 has been generated successfully
+2021-06-01 17:09:53,932 similarity index for Group10_Song1 has been generated successfully
+2021-06-01 17:09:53,933 similarity index for Group10_Song2 has been generated successfully
+2021-06-01 17:09:53,934 similarity index for Group10_Song3 has been generated successfully
+2021-06-01 17:09:53,935 similarity index for Group10_Song4 has been generated successfully
+2021-06-01 17:09:53,935 similarity index for Group11_Song1 has been generated successfully
+2021-06-01 17:09:53,936 similarity index for Group11_Song2 has been generated successfully
+2021-06-01 17:09:53,937 similarity index for Group11_Song3 has been generated successfully
+2021-06-01 17:09:53,938 similarity index for Group11_Song4 has been generated successfully
+2021-06-01 17:09:53,939 similarity index for Group12_Song1 has been generated successfully
+2021-06-01 17:09:53,939 similarity index for Group12_Song2 has been generated successfully
+2021-06-01 17:09:53,940 similarity index for Group12_Song3 has been generated successfully
+2021-06-01 17:09:53,941 similarity index for Group12_Song4 has been generated successfully
+2021-06-01 17:09:53,942 similarity index for Group13_Song1 has been generated successfully
+2021-06-01 17:09:53,943 similarity index for Group13_Song2 has been generated successfully
+2021-06-01 17:09:53,943 similarity index for Group13_Song3 has been generated successfully
+2021-06-01 17:09:53,944 similarity index for Group13_Song4 has been generated successfully
+2021-06-01 17:09:53,945 similarity index for Group14_Song1 has been generated successfully
+2021-06-01 17:09:53,946 similarity index for Group14_Song2 has been generated successfully
+2021-06-01 17:09:53,947 similarity index for Group14_Song3 has been generated successfully
+2021-06-01 17:09:53,947 similarity index for Group14_Song4 has been generated successfully
+2021-06-01 17:09:53,948 similarity index for Group15_Song1 has been generated successfully
+2021-06-01 17:09:53,949 similarity index for Group15_Song2 has been generated successfully
+2021-06-01 17:09:53,950 similarity index for Group15_Song3 has been generated successfully
+2021-06-01 17:09:53,951 similarity index for Group15_Song4 has been generated successfully
+2021-06-01 17:09:53,951 similarity index for Group17_Song1 has been generated successfully
+2021-06-01 17:09:53,952 similarity index for Group17_Song2 has been generated successfully
+2021-06-01 17:09:53,953 similarity index for Group17_Song3 has been generated successfully
+2021-06-01 17:09:53,954 similarity index for Group17_Song4 has been generated successfully
+2021-06-01 17:09:53,955 similarity index for Group18_Song1 has been generated successfully
+2021-06-01 17:09:53,955 similarity index for Group18_Song2 has been generated successfully
+2021-06-01 17:09:53,956 similarity index for Group18_Song3 has been generated successfully
+2021-06-01 17:09:53,957 similarity index for Group18_Song4 has been generated successfully
+2021-06-01 17:09:53,958 similarity index for Group20_Song1 has been generated successfully
+2021-06-01 17:09:53,959 similarity index for Group20_Song2 has been generated successfully
+2021-06-01 17:09:53,959 similarity index for Group20_Song3 has been generated successfully
+2021-06-01 17:09:53,960 similarity index for Group20_Song4 has been generated successfully
+2021-06-01 17:09:53,961 similarity index for Group21_Song1 has been generated successfully
+2021-06-01 17:09:53,962 similarity index for Group21_Song2 has been generated successfully
+2021-06-01 17:09:53,963 similarity index for Group21_Song3 has been generated successfully
+2021-06-01 17:09:53,963 similarity index for Group21_Song4 has been generated successfully
+2021-06-01 17:09:53,964 similarity index for Group22_Song1 has been generated successfully
+2021-06-01 17:09:53,965 similarity index for Group22_Song2 has been generated successfully
+2021-06-01 17:09:53,966 similarity index for Group22_Song3 has been generated successfully
+2021-06-01 17:09:53,967 similarity index for Group22_Song4 has been generated successfully
+2021-06-01 17:09:53,967 similarity index for Group23_Song1 has been generated successfully
+2021-06-01 17:09:53,968 similarity index for Group23_Song2 has been generated successfully
+2021-06-01 17:09:53,969 similarity index for Group23_Song3 has been generated successfully
+2021-06-01 17:09:53,970 similarity index for Group23_Song4 has been generated successfully
+2021-06-01 17:09:53,970 scan button returned the results successfully
+2021-06-01 17:09:53,971 Table has been created successfully

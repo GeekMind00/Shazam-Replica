@@ -38,6 +38,8 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
                 songOne, songTwo, weight_1, weight_2)
             self.similarityResults = compareFingerprint(
                 userWeightedAverageSongHashes)
+        logger.debug(
+            "scan button returned the results successfully")
         self.createTable()
 
     # ==============================================================================================
@@ -60,6 +62,9 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
             options=options)
         self.scanMode = 'One Song'
 
+        logger.debug(
+            "Browse a File button returned the file path successfully")
+
     # ==============================================================================================
 
     def browseFiles(self):
@@ -79,6 +84,9 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
             "Audio Files (*.mp3)",
             options=options)
         self.scanMode = 'Two Songs'
+
+        logger.debug(
+            "Browse Files button returned the file paths successfully")
 
     # ==============================================================================================
 
@@ -105,6 +113,8 @@ class ShazamApp(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.horizontalHeader().setSectionResizeMode(
             QHeaderView.Stretch)
+
+        logger.debug("Table has been created successfully")
 
 
 # ==============================================================================================
